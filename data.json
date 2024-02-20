@@ -1,0 +1,65 @@
+[
+    {
+        "request_id": "2",
+        "point_person": "Migs",
+        "emails": [
+            "rafael.louie.miguel@gmail.com",
+            "miguel.rafaellouie2003@gmail.com",
+            "luisa24@gmail.com",
+            "meow@gmail.com",
+            "iza@gmail.com",
+            "lou@gmail.com",
+            "alien@gmail.com"
+        ],
+        "status": "sent"
+    },
+    {
+        "request_id": "1",
+        "point_person": "Iza",
+        "emails": [
+            "luisa24@gmail.com",
+            "miguel.rafaellouie2003@gmail.com",
+            "miguel.rafaellouie202203@gmail.com",
+            "aki@gmail.com",
+            "aki2222@gmail.com",
+            "ak44444i@gmail.com",
+            "ak45345i@gmail.com",
+            "6766aki@gmail.com",
+            "aksadi@gmail.com",
+            "akivc@gmail.com",
+            "magisa@gmail.com",
+            "magwreisa@gmail.com"
+        ],
+        "status": "pending"
+    },
+    {
+        "request_id": "5",
+        "point_person": "Aki",
+        "emails": ["aki@gmail.com", "asi@gmail.com"],
+        "status": "cancelled"
+    },
+    {
+        "request_id": "10",
+        "point_person": "Magisa",
+        "emails": ["magisa@gmail.com"],
+        "status": "pending"
+    },
+    {
+        "request_id": "20",
+        "point_person": "Magisa",
+        "emails": ["magi2sa@gmail.com"],
+        "status": "pending"
+    },
+    {
+        "request_id": "30",
+        "point_person": "Magisa",
+        "emails": ["magis3a@gmail.com"],
+        "status": "pending"
+    },
+    {
+        "request_id": "40",
+        "point_person": "Magdalawa",
+        "emails": ["magis3a@gmail.com", "magisa4@gmail.com"],
+        "status": "sent"
+    }
+]
