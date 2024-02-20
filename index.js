@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
+const { v4: uuidv4 } = require("uuid");
 const app = express();
 
 let corsOptions = {
@@ -27,17 +28,45 @@ app.get("/get_requests", (req, res) => {
 });
 
 app.post("/create_request", (req, res) => {
-  const requestData = req.body;
+    const { pointPerson, emails, status } = req.body;
 
-  fs.writeFile("newData.json", JSON.stringify(requestData), (err) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send("Error writing data file");
-      return;
+    // Check if requestData contains necessary properties
+    if (!pointPerson || !Array.isArray(emails) || !status) {
+        res.status(400).send("Invalid request data");
+        return;
     }
 
-    res.json({ message: "Request created successfully" });
-  });
+    // Generate a unique request_id
+    const request_id = uuidv4();
+
+    // Read the existing data
+    fs.readFile("data.json", "utf8", (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send("Error reading data file");
+        }
+
+        // Parse the data and append the new request
+        const existingData = JSON.parse(data);
+        existingData.push({ request_id, pointPerson, emails, status });
+
+        // Write the updated data back to the file
+        fs.writeFile(
+            "data.json",
+            JSON.stringify(existingData, null, 2),
+            (err) => {
+                if (err) {
+                    console.error(err);
+                    return res.status(500).send("Error writing data file");
+                }
+
+                res.json({
+                    message: "Request created successfully",
+                    request_id,
+                });
+            }
+        );
+    });
 });
 
 app.listen(3000, () => {

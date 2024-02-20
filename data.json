@@ -61,5 +61,17 @@
         "point_person": "Magdalawa",
         "emails": ["magis3a@gmail.com", "magisa4@gmail.com"],
         "status": "sent"
+    },
+    {
+        "request_id": "50",
+        "pointPerson": "Luisa",
+        "emails": ["miggy@gmail.com", "izzy@gmail.com"],
+        "status": "pending"
+    },
+    {
+        "request_id": "70",
+        "pointPerson": "alien",
+        "emails": ["alien@gmail.com"],
+        "status": "pending"
     }
 ]
